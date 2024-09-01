@@ -43,7 +43,7 @@ def add_task(description):
 
 def delete_task(task_id):
     tasks = load_tasks()
-    tasks = [task for task in tasks if tasks["id"] != task_id]
+    tasks = [task for task in tasks if task["id"] != task_id]
     save_tasks(tasks)
 
 class  TaskTracker:
